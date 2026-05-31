@@ -1,0 +1,18 @@
+# Node-Abhängigkeiten (Frontend-Framework-Ballast)
+node_modules/
+sicherung/
+
+# Temporäre Vite-Builds (wird bei jedem Build neu erzeugt)
+dist/
+
+# Editor-Einstellungen
+.vscode/
+.idea/
+
+# Betriebssystem-Restmüll
+.DS_Store
+Thumbs.db
+
+# Sensible Backend-Daten (Sicherheit geht vor)
+# Falls du später Passwörter in eine config.local.php auslagerst:
+config.local.php
