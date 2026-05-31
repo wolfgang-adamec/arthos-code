@@ -32,32 +32,7 @@
     </div>
   </div>
 
-  <div id="user-form-container" class="bg-white border border-gray-200 rounded-xl shadow-sm p-4 sm:p-7 dark:bg-gray-800 dark:border-gray-700" hidden>
-    <div class="text-center mb-5">
-      <h2 class="text-lg font-bold text-gray-800 dark:text-white">Neuen Benutzer registrieren</h2>
-    </div>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div>
-        <label for="new-username" class="block text-sm mb-2 dark:text-white">Benutzername</label>
-        <input type="text" id="new-username" class="py-3 px-4 block w-full border-gray-250 rounded-lg text-sm focus:border-blue-500" autocomplete="off">
-      </div>
-      <div>
-        <label for="new-password" class="block text-sm mb-2 dark:text-white">Passwort</label>
-        <input type="password" id="new-password" class="py-3 px-4 block w-full border-gray-250 rounded-lg text-sm focus:border-blue-500">
-      </div>
-    </div>
-
-    <div id="form-message" class="hidden text-sm p-2 rounded-lg mt-4"></div>
-
-    <div class="mt-4 flex justify-end gap-x-2">
-      <button type="button" id="btn-cancel-user" class="py-2 px-4 inline-flex justify-center items-center text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 hover:bg-gray-50">
-        Abbrechen
-      </button>
-      <button type="button" id="btn-save-user" class="py-2 px-4 inline-flex justify-center items-center text-sm font-semibold rounded-lg bg-blue-600 text-white hover:bg-blue-700">
-        Speichern
-      </button>
-    </div>
+  <div id="user-form-container" class="hidden fixed inset-0 z-50 overflow-y-auto p-4 sm:p-7 flex items-center justify-center" hidden>
   </div>
 
 </div>
