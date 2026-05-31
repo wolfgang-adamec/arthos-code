@@ -1,0 +1,38 @@
+<div class="fixed inset-0 bg-gray-900 bg-opacity-50 transition-opacity"></div>
+
+<div class="bg-white border border-gray-200 rounded-xl shadow-lg max-w-md w-full z-10 overflow-hidden transform transition-all m-3 sm:m-0">
+  
+  <div class="flex justify-between items-center py-3 px-4 border-b border-gray-200">
+    <h3 class="font-bold text-gray-800 font-mono">Neuen Begriff anlegen</h3>
+    <button type="button" id="btn-cancel-term-x" class="inline-flex flex-shrink-0 justify-center items-center h-8 w-8 rounded-lg text-gray-500 hover:bg-gray-100 text-sm">
+      ✕
+    </button>
+  </div>
+
+  <div class="p-4 space-y-4">
+    <div id="form-message"></div>
+
+    <div>
+      <label for="new-id" class="block text-sm font-medium mb-1 text-gray-700">ID</label>
+      <input type="text" id="new-id" class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500">
+    </div>
+    <div>
+      <label for="new-lang-code" class="block text-sm font-medium mb-1 text-gray-700">Sprach-Code</label>
+	  <input type="text" id="new-lang-code" class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500">      
+    </div>	
+    <div>
+      <label for="new-term" class="block text-sm font-medium mb-1 text-gray-700">Begriff</label>
+	  <input type="text" id="new-term" class="py-2 px-3 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500">      
+    </div>	
+  </div>
+
+  <div class="flex justify-end items-center gap-x-2 py-3 px-4 border-t border-gray-200 bg-gray-50">
+    <button type="button" id="btn-cancel-term" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50">
+      Abbrechen
+    </button>
+    <button type="button" id="btn-save-term" class="py-2 px-3 inline-flex items-center gap-x-2 text-sm font-semibold rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700">
+      Speichern
+    </button>
+  </div>
+
+</div>

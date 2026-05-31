@@ -7,6 +7,7 @@ import appShellTemplate from './templates/app-shell.html?raw';
 import loginTemplate from './templates/login.html?raw';
 import userFormTemplate from './templates/user-form.html?raw';
 import userManagementTemplate from './templates/user-management.html?raw';
+import manage_terms_template from './templates/manage-terms.html?raw';
 
 // Wir importieren unsere HTML-Zulieferer
 import { 
@@ -17,6 +18,11 @@ import {
 import { 
   setupUserManagementForm  
 } from './userController.js';
+
+
+import { 
+  setup_terms_management_panel
+} from './terms_controller.js';
 
 const API_URL = 'https://freeshell.de/wadamec/api.php';
 
@@ -115,13 +121,13 @@ function setupLoginLogic() {
  * Aktiviert die Navigation im geschützten Bereich
  */
 function setupMenuNavigation(subviewContainer) {
-  const btnHome = document.getElementById('nav-home-btn');
-  const btnProjects = document.getElementById('nav-projects-btn');
-  const btnUsers = document.getElementById('nav-users-btn');
-  const btnLogout = document.getElementById('logout-btn');
+  const btnHome     = document.getElementById('nav-home-btn');
+  const btn_terms   = document.getElementById('nav-terms-btn');
+  const btnUsers    = document.getElementById('nav-users-btn');
+  const btnLogout   = document.getElementById('logout-btn');
 
   const updateActiveTab = (activeBtn) => {
-    [btnHome, btnProjects, btnUsers].forEach(btn => {
+    [btnHome, btn_terms, btnUsers].forEach(btn => {
       btn.classList.remove('border-blue-600', 'text-blue-600');
       btn.classList.add('border-transparent', 'text-gray-500');
     });
@@ -134,9 +140,11 @@ function setupMenuNavigation(subviewContainer) {
     subviewContainer.innerHTML = renderHomeView();
   });
 
-  btnProjects.addEventListener('click', () => {
-    updateActiveTab(btnProjects);
-    subviewContainer.innerHTML = renderProjectsView(SESSION_DATA.projects);
+  btn_terms.addEventListener ('click', () => {
+    updateActiveTab (btn_terms);
+	
+    subviewContainer.innerHTML = manage_terms_template;
+	setup_terms_management_panel (API_URL)
   });
 
   btnUsers.addEventListener('click', () => {
